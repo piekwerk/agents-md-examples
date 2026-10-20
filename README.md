@@ -38,6 +38,11 @@ Or cherry-pick just the agent you use (Claude Code? Copy `.claude/CLAUDE.md`. Cu
 - **.cursor/rules/*.mdc** — Cursor applies these rules when editing matching files
 - **copilot-instructions.md** — GitHub Copilot Chat uses this for repository context
 
+## Related
+
+- [AI agent mistake cost calculator](https://piekwerk.github.io/ai-agent-cost-calculator/) — estimate what agent mistakes cost you per year
+- [20 AI Agent Anti-Patterns](https://piekwerk.gumroad.com/l/anti-patterns-kit) — the config rules that stop the mistakes (€9)
+
 ## License
 
 MIT
