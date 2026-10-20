@@ -1,61 +1,43 @@
-# AGENTS.md examples for every stack
+# AI Coding Agent Config Examples
 
-Ready-to-use `AGENTS.md` files for 12 common stacks. Drop one in your repo root and AI coding tools (Claude Code, Cursor, GitHub Copilot, Windsurf, etc.) pick it up automatically.
-
-Each file covers the essentials: project context, commands, code style, testing expectations, commit conventions, safety rules, and stack-specific guardrails.
-
-## What is AGENTS.md?
-
-`AGENTS.md` is a convention for giving AI coding agents project-level instructions. You put it in your repo root. Tools that support it read it before generating or editing code. It is the tool-neutral baseline: you write it once, every agent benefits.
+Ready-to-use config kits for 12 stacks. Each directory contains working AGENTS.md, CLAUDE.md, Cursor rules, and GitHub Copilot instructions that you can drop into your project.
 
 ## Stacks
 
-| Stack | AGENTS.md | Language |
-|---|---|---|
-| [Astro](astro/) | [AGENTS.md](astro/AGENTS.md) | TypeScript |
-| [.NET (C#)](dotnet/) | [AGENTS.md](dotnet/AGENTS.md) | C# |
-| [Go (standard library)](go-standard/) | [AGENTS.md](go-standard/AGENTS.md) | Go |
-| [Laravel](laravel/) | [AGENTS.md](laravel/AGENTS.md) | PHP |
-| [Next.js + TypeScript](nextjs-ts/) | [AGENTS.md](nextjs-ts/AGENTS.md) | TypeScript |
-| [Node.js + Express](node-express/) | [AGENTS.md](node-express/AGENTS.md) | TypeScript |
-| [Python + Django](python-django/) | [AGENTS.md](python-django/AGENTS.md) | Python |
-| [Python + FastAPI](python-fastapi/) | [AGENTS.md](python-fastapi/AGENTS.md) | Python |
-| [Ruby on Rails](rails/) | [AGENTS.md](rails/AGENTS.md) | Ruby |
-| [React + Vite](react-vite/) | [AGENTS.md](react-vite/AGENTS.md) | TypeScript |
-| [Rust + Tokio](rust-tokio/) | [AGENTS.md](rust-tokio/AGENTS.md) | Rust |
-| [SvelteKit](svelte-kit/) | [AGENTS.md](svelte-kit/AGENTS.md) | TypeScript |
+| Stack | Framework | Agent files | Key rules |
+|-------|-----------|-------------|-----------|
+| `nextjs-ts` | Next.js 15 + TypeScript | 4 | App Router, RSC, server actions |
+| `react-vite` | React 19 + Vite | 4 | Hooks, Zustand, Vitest |
+| `python-django` | Django 5.1 | 4 | CBV, DRF, pytest |
+| `python-fastapi` | FastAPI 0.115 | 4 | Pydantic v2, async, alembic |
+| `node-express` | Express 5 + TypeScript | 4 | Zod validation, ESM |
+| `rails` | Rails 8 | 4 | Hotwire, importmaps, minitest |
+| `go-standard` | Go 1.23 stdlib | 4 | No framework, table tests |
+| `rust-tokio` | Rust + Tokio | 4 | Ownership, error handling, async |
+| `laravel` | Laravel 11 | 4 | Eloquent, Pest, Livewire |
+| `svelte-kit` | SvelteKit 2 | 4 | Runes, form actions, Vitest |
+| `astro` | Astro 5 | 4 | Islands, content collections |
+| `dotnet` | ASP.NET Core 9 | 4 | Minimal API, EF Core |
 
-## How to use
+## Quick start
 
-1. Pick your stack from the table above.
-2. Copy the `AGENTS.md` into your repo root.
-3. Edit the command table to match your project (package manager, test runner, build script).
-4. Commit it. Done.
+```bash
+# Copy one stack into your project
+cp -r nextjs-ts/.claude your-project/
+cp -r nextjs-ts/.cursor your-project/
+cp nextjs-ts/AGENTS.md your-project/
+cp nextjs-ts/.github/copilot-instructions.md your-project/.github/
+```
 
-The file works on its own. No other files required, no install step.
+Or cherry-pick just the agent you use (Claude Code? Copy `.claude/CLAUDE.md`. Cursor? Copy `.cursor/rules/`).
 
-## Want the full kit?
+## What these files do
 
-These examples cover the `AGENTS.md` baseline. The full [Piekwerk AgentConfig Studio](https://piekwerk.gumroad.com/l/agentconfig) kits add:
-
-- **CLAUDE.md** for Claude Code (verification loop, anti-patterns, `@import` from the baseline)
-- **Cursor rules** (4 scoped `.mdc` files: core, stack, testing, safety)
-- **copilot-instructions.md** for GitHub Copilot
-- **8 workflow skills** (PR review, migration safety, dependency audit, etc.)
-- **Idempotent installer** with dry-run, doctor, and uninstall
-- **Validation harness** proving structural integrity across all 12 stacks
-- **12 months of drift-watch updates** as tool formats evolve
-
-All 12 stacks. One purchase.
-
-## Contributing
-
-Found a mistake? Have a stack you want added? Open an issue or PR.
+- **AGENTS.md** — GitHub Copilot workspace agent reads this for project context
+- **CLAUDE.md** — Claude Code loads this as project instructions on every session
+- **.cursor/rules/*.mdc** — Cursor applies these rules when editing matching files
+- **copilot-instructions.md** — GitHub Copilot Chat uses this for repository context
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
-
----
-
-Built by [Piekwerk](https://piekwerk.com).
+MIT
