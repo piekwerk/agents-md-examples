@@ -45,7 +45,7 @@ Or cherry-pick just the agent you use (Claude Code? Copy `.claude/CLAUDE.md`. Cu
 
 ## Stay current
 
-12 stacks drift fast — model defaults flip, guardrails change, new tools ship weekly. [dev.to/piekwerk](https://dev.to/piekwerk) tracks what actually changed and what to do about it. Full kit (versioned, validated against 12 stacks) at [piekwerk.gumroad.com](https://piekwerk.gumroad.com).
+12 stacks drift fast. Model defaults flip, guardrails change, new tools ship weekly. [dev.to/piekwerk](https://dev.to/piekwerk) tracks what actually changed and what to do about it. Full kit (versioned, validated against 12 stacks) at [piekwerk.gumroad.com](https://piekwerk.gumroad.com).
 
 ## License
 
