@@ -43,6 +43,10 @@ Or cherry-pick just the agent you use (Claude Code? Copy `.claude/CLAUDE.md`. Cu
 - [AI agent mistake cost calculator](https://piekwerk.github.io/ai-agent-cost-calculator/) — estimate what agent mistakes cost you per year
 - [20 AI Agent Anti-Patterns](https://piekwerk.gumroad.com/l/anti-patterns-kit) — the config rules that stop the mistakes (€9)
 
+## Stay current
+
+12 stacks drift fast — model defaults flip, guardrails change, new tools ship weekly. [dev.to/piekwerk](https://dev.to/piekwerk) tracks what actually changed and what to do about it. Full kit (versioned, validated against 12 stacks) at [piekwerk.gumroad.com](https://piekwerk.gumroad.com).
+
 ## License
 
 MIT
